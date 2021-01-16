@@ -6,26 +6,22 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  inputtext : number = null
-  Number : number
+
+  num=0
+  Numbers = [0]
+  phoneNumber = [null]
 
 
-  change(event)
-   {this.inputtext = event.target.value
 
+  Add(){
+    this.num = this.num+1
+    this.Numbers.push(this.num)
+    this.phoneNumber.push( null)
   }
 
-  generateNum(){
-    if(this.inputtext>0){
-
-      if(this.inputtext%2===0){
-        this.Number= this.inputtext*this.inputtext-1
-       }else{
-        this.Number = this.inputtext*this.inputtext+1
-       }
-
-
-    }
-
+  submit(){
+    console.log(this.phoneNumber)
   }
+
+
 }
